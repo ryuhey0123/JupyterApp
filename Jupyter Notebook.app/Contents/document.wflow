@@ -79,7 +79,7 @@ def listened(port):
 
 def launch_jupyter(port):
     """Launch a Jupyter Notebook Server with the spacified port."""
-    cmd = "bash -cl 'jupyter-notebook ~/ --port={} --no-browser &amp;' &gt; /dev/null 2&gt;&amp;1"
+    cmd = "bash -cl 'jupyter-lab ~/ --port={} --no-browser &amp;' &gt; /dev/null 2&gt;&amp;1"
     proc = Popen(cmd.format(port), stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
     proc.communicate()
 
@@ -96,11 +96,11 @@ if __name__ == '__main__':
 
     if ipynbs:
         for ipynb in ipynbs:
-            url = 'http://localhost:{}/notebooks/{}'
+            url = 'http://localhost:{}/lab/{}'
             path = os.path.relpath(ipynb, os.environ['HOME'])
             webbrowser.open(url.format(PORT, path))
     else:
-        url = 'http://localhost:{}/tree'
+        url = 'http://localhost:{}/lab'
         webbrowser.open(url.format(PORT))</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -214,7 +214,7 @@ if __name__ == '__main__':
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>627.000000:710.000000</string>
+				<string>627.000000:782.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
