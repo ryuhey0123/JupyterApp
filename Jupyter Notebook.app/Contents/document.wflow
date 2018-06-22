@@ -211,12 +211,10 @@ if __name__ == '__main__':
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:653.000000</string>
+				<string>627.000000:710.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Japanese.lproj/main.nib</string>
 			</dict>
